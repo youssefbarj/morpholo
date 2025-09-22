@@ -185,90 +185,48 @@ export default function EyelashMappingGame() {
                 <DialogTrigger asChild>
                   <Button className="bg-purple-600 hover:bg-purple-700 text-white">GUIDE</Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-[95vw] sm:max-w-2xl mx-2 sm:mx-4 max-h-[85vh] sm:max-h-[90vh] flex flex-col fixed top-96 left-1/2 transform -translate-x-1/2">
-                  <DialogHeader className="flex-shrink-0">
-                    <DialogTitle className="text-purple-900 text-base sm:text-lg">
-                      Guide du Mapping des Cils
-                    </DialogTitle>
+                <DialogContent className="w-96 h-96 p-6 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-xl">
+                  <DialogHeader className="flex-shrink-0 mb-4">
+                    <DialogTitle className="text-purple-900 text-lg text-center">Guide du Mapping des Cils</DialogTitle>
                   </DialogHeader>
-                  <div className="flex-1 overflow-y-auto space-y-4 text-sm">
-                    <div className="bg-purple-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-3 text-lg">Œil de poupée</h3>
-                      <div className="space-y-2 text-purple-800">
-                        <p className="font-medium">Centre long, coins courts = agrandit les petits yeux</p>
+                  <div className="flex-1 overflow-y-auto space-y-3 text-xs">
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Œil de poupée</h3>
+                      <div className="space-y-1 text-purple-800">
+                        <p className="font-medium text-xs">Centre long, coins courts = agrandit les petits yeux</p>
                         <p className="text-xs text-purple-600">Règle: 12mm centre, 9mm coins</p>
-                        <div className="mt-3 pt-2 border-t border-purple-200">
-                          <p className="text-xs">
-                            <strong>Durée:</strong> 4-6 semaines
-                          </p>
-                          <p className="text-xs">
-                            <strong>Temps de pose:</strong> 2-3 heures
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className="bg-pink-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-3 text-lg">Naturel</h3>
-                      <div className="space-y-2 text-purple-800">
-                        <p className="font-medium">Longueurs uniformes = suit la forme naturelle</p>
+                    <div className="bg-pink-50 p-3 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Naturel</h3>
+                      <div className="space-y-1 text-purple-800">
+                        <p className="font-medium text-xs">Longueurs uniformes = suit la forme naturelle</p>
                         <p className="text-xs text-purple-600">Règle: même courbure partout</p>
-                        <div className="mt-3 pt-2 border-t border-pink-200">
-                          <p className="text-xs">
-                            <strong>Durée:</strong> 4-6 semaines
-                          </p>
-                          <p className="text-xs">
-                            <strong>Temps de pose:</strong> 2-2.5 heures
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className="bg-purple-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-3 text-lg">Œil de biche</h3>
-                      <div className="space-y-2 text-purple-800">
-                        <p className="font-medium">Court → long vers l'extérieur = corrige yeux tombants</p>
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Œil de biche</h3>
+                      <div className="space-y-1 text-purple-800">
+                        <p className="font-medium text-xs">Court → long vers l'extérieur = corrige yeux tombants</p>
                         <p className="text-xs text-purple-600">Règle: 9mm intérieur, 14mm extérieur</p>
-                        <div className="mt-3 pt-2 border-t border-purple-200">
-                          <p className="text-xs">
-                            <strong>Durée:</strong> 4-6 semaines
-                          </p>
-                          <p className="text-xs">
-                            <strong>Temps de pose:</strong> 2.5-3 heures
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className="bg-pink-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-3 text-lg">Œil ouvert</h3>
-                      <div className="space-y-2 text-purple-800">
-                        <p className="font-medium">Pic au centre = ouvre les yeux enfoncés</p>
+                    <div className="bg-pink-50 p-3 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Œil ouvert</h3>
+                      <div className="space-y-1 text-purple-800">
+                        <p className="font-medium text-xs">Pic au centre = ouvre les yeux enfoncés</p>
                         <p className="text-xs text-purple-600">Règle: 12mm milieu, 10mm coins</p>
-                        <div className="mt-3 pt-2 border-t border-pink-200">
-                          <p className="text-xs">
-                            <strong>Durée:</strong> 4-6 semaines
-                          </p>
-                          <p className="text-xs">
-                            <strong>Temps de pose:</strong> 2-3 heures
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className="bg-purple-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-purple-900 mb-3 text-lg">Œil de chaton</h3>
-                      <div className="space-y-2 text-purple-800">
-                        <p className="font-medium">Biche version douce = lifting subtil</p>
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <h3 className="font-semibold text-purple-900 mb-2 text-sm">Œil de chaton</h3>
+                      <div className="space-y-1 text-purple-800">
+                        <p className="font-medium text-xs">Biche version douce = lifting subtil</p>
                         <p className="text-xs text-purple-600">Règle: progression moins marquée</p>
-                        <div className="mt-3 pt-2 border-t border-purple-200">
-                          <p className="text-xs">
-                            <strong>Durée:</strong> 4-6 semaines
-                          </p>
-                          <p className="text-xs">
-                            <strong>Temps de pose:</strong> 2.5-3 heures
-                          </p>
-                        </div>
                       </div>
                     </div>
-                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg mt-4">
-                      <p className="text-sm font-medium text-purple-900">
+                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-3 rounded-lg">
+                      <p className="text-xs font-medium text-purple-900">
                         <strong>Mémo:</strong> Centre = agrandit / Extérieur = allonge / Uniforme = naturel
                       </p>
                     </div>
