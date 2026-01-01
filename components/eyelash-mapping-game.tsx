@@ -113,6 +113,7 @@ export default function EyelashMappingGame() {
   const [draggedItem, setDraggedItem] = useState<string | null>(null)
   const [feedback, setFeedback] = useState<DropResult | null>(null)
   const [showGuide, setShowGuide] = useState(false)
+  const [showVideo, setShowVideo] = useState(false)
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null)
 
   const handleDragStart = (shapeId: string) => {
@@ -173,7 +174,7 @@ export default function EyelashMappingGame() {
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-2">
             Cartographie des Cils - Choisir le Bon Mapping
           </h1>
-          <p className="text-purple-700 mb-4">Glissez-déposez la technique appropriée selon la morphologie de l'œil</p>
+          <p className="text-purple-700 mb-4">Glissez la bonne morphologie d'œil vers la bonne technique</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Badge className="text-lg px-4 py-2 bg-purple-200 text-purple-800 hover:bg-purple-200">
@@ -234,13 +235,25 @@ export default function EyelashMappingGame() {
                 </DialogContent>
               </Dialog>
 
-              <Button
-                onClick={resetGame}
-                variant="outline"
-                className="border-pink-300 text-pink-600 hover:bg-pink-50 bg-transparent"
-              >
-                Recommencer
-              </Button>
+              <Dialog open={showVideo} onOpenChange={setShowVideo}>
+                <DialogTrigger asChild>
+                  <Button className="bg-pink-600 hover:bg-pink-700 text-white">COMMENT JOUER</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-6">
+                  <DialogHeader>
+                    <DialogTitle className="text-purple-900 text-xl text-center mb-4">Comment Jouer</DialogTitle>
+                  </DialogHeader>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/gifs/tutorial.gif"
+                      alt="Tutoriel comment jouer"
+                      width={800}
+                      height={450}
+                      className="rounded-lg"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
@@ -298,7 +311,7 @@ export default function EyelashMappingGame() {
           <div className="lg:col-span-2">
             <h2 className="text-xl font-semibold text-purple-900 mb-4">Morphologies d'Yeux</h2>
             <p className="text-purple-600 mb-6 text-sm">
-              Glissez chaque morphologie d'œil vers la technique de mapping que vous pensez être la plus appropriée
+              Glissez chaque morphologie d'œil vers la bonne technique
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {eyeShapes.map((shape) => (
@@ -312,16 +325,15 @@ export default function EyelashMappingGame() {
                 >
                   <CardContent className="p-4">
                     <div className="flex items-center gap-3">
-                      <div
-                        className="relative w-40 h-40 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
-                        onClick={() => handleImageClick(shape.image || "/placeholder.svg", shape.title)}
-                      >
-                        <Image
-                          src={shape.image || "/placeholder.svg"}
-                          alt={shape.title}
-                          fill
-                          className="object-cover rounded-lg"
-                        />
+                      <div className="relative w-40 h-40 flex-shrink-0 overflow-hidden rounded-lg">
+                        <div className="absolute inset-0" style={{ width: "120%", left: "-10%" }}>
+                          <Image
+                            src={shape.image || "/placeholder.svg"}
+                            alt={shape.title}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-medium text-purple-900 mb-1">{shape.title}</h3>
