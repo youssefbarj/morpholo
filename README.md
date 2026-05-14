@@ -1,18 +1,20 @@
-# Jeu de Mapping des Cils — Extension de Cils Slide 5
+# EXTENSION DE CILS — Slide 5
 
-**Course:** Extension de Cils  
-**Slide:** 5  
-**Live URL:** https://morpholo.edtechiecorp.com  
-**Stack:** Next.js · Tailwind CSS · TypeScript · GitHub Pages  
-
-## What this slide does
-
-An interactive lash mapping game where learners practice matching eyelash extension lengths and styles to different eye shapes. The game reinforces morphological analysis skills — a critical competency for lash technicians who must assess each client's eye shape before selecting the correct lash design. Positioned at slide 5, it follows the theory content and gives learners a chance to apply what they've learned in an engaging, game-based format.
+**Course:** EXTENSION DE CILS
+**Slide:** 5
+**Live URL:** https://morpholo.edtechiecorp.com
+**Stack:** Next.js · Tailwind CSS · TypeScript · GitHub Pages
 
 ## Screenshot
 
-![morpholo](./screenshot.png)
+![morpholo](https://github.com/youssefbarj/morpholo/raw/main/screenshot.png)
+
+## What this slide does
+
+This is an interactive slide embedded as an iframe inside Coassemble. See the screenshot above for a visual preview of the content.
 
 ## Usage
 
-This slide is embedded as an iframe inside Coassemble at the live URL above. DNS is managed via Cloudflare (`edtechiecorp.com`). To update the slide, push to the `main` branch — GitHub Actions will rebuild and redeploy automatically.
+This slide is served via GitHub Pages at the live URL above. DNS is managed via Cloudflare (`edtechiecorp.com`). To update the slide, push to the `main` branch — GitHub Actions will rebuild and redeploy automatically.
+
+> **For E-Lumy's tech team:** After migrating this repo to your own GitHub account, re-enable GitHub Pages in Settings → Pages → Source: GitHub Actions. Then update the embed URL in Coassemble to your new deployment URL.
