@@ -7,7 +7,7 @@
 
 ## Screenshot
 
-![morpholo](https://github.com/youssefbarj/morpholo/raw/main/screenshot.png)
+![morpholo](https://raw.githubusercontent.com/youssefbarj/morpholo/main/screenshot.png)
 
 ## What this slide does
 
